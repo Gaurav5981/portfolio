@@ -324,21 +324,25 @@ nav a{
 }
 
 
-/* For Tablets (width ≤ 992px) */
-@media (max-width: 992px) {
+/* === Responsive Fix for Tablet & Mobile === */
 
+@media screen and (max-width: 992px) {
     .main-container {
         grid-template-columns: 1fr;
-        /* Sidebar on top */
         gap: 20px;
         padding: 20px;
+        max-width: 100%;
     }
 
     .Sidebar {
-        position: relative;
-        /* remove sticky */
+        position: static;
         height: auto;
         text-align: center;
+        padding: 25px 15px;
+    }
+
+    .main-content {
+        padding: 20px;
     }
 
     nav {
@@ -348,17 +352,21 @@ nav a{
 
     .project-container {
         grid-template-columns: 1fr 1fr;
-        /* 2 per row */
     }
 }
 
-/* Fix for mobile view (sidebar layout) */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+        max-width: 100%;
+    }
 
     .Sidebar {
-        display: block; /* ❌ not flex */
+        display: block;
         text-align: center;
-        padding: 20px;
+        padding: 15px;
     }
 
     .Profile img {
@@ -371,17 +379,22 @@ nav a{
     }
 
     .social {
-        margin-top: 20px;
         display: flex;
         justify-content: center;
         gap: 15px;
+        margin-top: 15px;
     }
 
-    .social img {
-        height: 28px;
-        width: 28px;
-        margin: 0;
+    .main-content {
+        padding: 15px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project img {
+        height: 160px;
     }
 }
-
-
