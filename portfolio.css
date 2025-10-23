@@ -352,55 +352,36 @@ nav a{
     }
 }
 
-/* For Mobile Phones (width ≤ 600px) */
-@media (max-width: 600px) {
-
-    .main-container {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
+/* Fix for mobile view (sidebar layout) */
+@media screen and (max-width: 750px) {
 
     .Sidebar {
+        display: block; /* ❌ not flex */
+        text-align: center;
         padding: 20px;
     }
 
     .Profile img {
-        height: 90px;
-        width: 90px;
+        height: 100px;
+        width: 100px;
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .Profile h2 {
+        font-size: 1.2rem;
     }
 
-    .heading {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-        /* skills 2 per row */
+    .social {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
         gap: 15px;
     }
 
-    .project-container {
-        grid-template-columns: 1fr;
-        /* 1 per row */
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    .project img {
-        height: 150px;
-    }
-
     .social img {
-        height: 20px;
-        width: 20px;
+        height: 28px;
+        width: 28px;
+        margin: 0;
     }
 }
+
+
